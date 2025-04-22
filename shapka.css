@@ -4,7 +4,7 @@ header {
   color: white;
   text-align: center;
   padding: 30px 20px;
-  position: relative; /* фиксируем в нормальном потоке */
+  position: relative;
   z-index: 1;
 }
 
@@ -17,6 +17,7 @@ header p {
   margin: 10px 0 0;
   font-size: 1.2em;
 }
+
 .sidebar {
   width: 200px;
   left: -200px;
@@ -46,3 +47,7 @@ header p {
   z-index: 1000;
 }
 
+/* КРИТИЧНО: убираем отступ у всего содержимого */
+body {
+  margin: 0;
+}
