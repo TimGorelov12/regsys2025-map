@@ -1,4 +1,4 @@
-/* Единый стиль для всех страниц (как в index.html) */
+/* ====== ОБЩИЙ СТИЛЬ ====== */
 body {
   font-family: sans-serif;
   margin: 0;
@@ -6,29 +6,27 @@ body {
   line-height: 1.6;
 }
 
-/* Шапка */
+/* ====== ШАПКА ====== */
 header {
   background-color: #336699;
   color: white;
   padding: 30px 20px;
   text-align: center;
-  font-family: sans-serif;
-  line-height: 1.6;
 }
 
-
-/* Текст в шапке */
+/* Заголовок */
 header h1 {
   margin: 0;
   font-size: 2em;
 }
 
+/* Подзаголовок */
 header p {
   margin: 10px 0 0;
   font-size: 1.2em;
 }
 
-/* Боковое меню */
+/* ====== БОКОВОЕ МЕНЮ ====== */
 .menu-btn {
   position: fixed;
   top: 20px;
@@ -71,9 +69,26 @@ header p {
   left: 0;
 }
 
-/* Контент */
-section {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
+/* ====== АДАПТИВ ====== */
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 1.5em;
+  }
+
+  header p {
+    font-size: 1em;
+  }
+
+  .sidebar {
+    width: 200px;
+    left: -200px;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .menu-btn {
+    font-size: 1.2em;
+  }
 }
