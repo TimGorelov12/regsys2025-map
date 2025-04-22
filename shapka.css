@@ -1,9 +1,11 @@
 /* Стили для шапки сайта */
 header {
-  background: #336699;
+  background-color: #336699;
   color: white;
   text-align: center;
   padding: 30px 20px;
+  position: relative; /* фиксируем в нормальном потоке */
+  z-index: 1;
 }
 
 header h1 {
@@ -15,11 +17,9 @@ header p {
   margin: 10px 0 0;
   font-size: 1.2em;
 }
-@media screen and (max-width: 768px) {
-  body {
-    margin-left: 0;
-  }
 
+/* Адаптация для мобильных */
+@media screen and (max-width: 768px) {
   .sidebar {
     width: 200px;
     left: -200px;
@@ -27,5 +27,9 @@ header p {
 
   .sidebar.open {
     left: 0;
+  }
+
+  body {
+    margin-left: 0;
   }
 }
