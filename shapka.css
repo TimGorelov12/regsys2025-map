@@ -102,7 +102,7 @@ header p {
   width: 100%;
   aspect-ratio: 3 / 2; /* автоматически задаёт высоту */
   margin-top: 20px;
-  overflow: hidden;
+  
 }
 
 .map-container iframe {
