@@ -1,12 +1,10 @@
-/* Общие стили */
 body {
-  margin: 0;
   font-family: sans-serif;
+  margin: 0;
   background: #f5f5f5;
   line-height: 1.6;
 }
 
-/* Шапка */
 header {
   background-color: #336699;
   color: white;
@@ -17,52 +15,12 @@ header {
 header h1 {
   margin: 0;
   font-size: 2em;
+  font-family: sans-serif;
+  font-weight: bold;
 }
 
 header p {
   margin: 10px 0 0;
   font-size: 1.2em;
-}
-
-/* Меню (боковая панель) */
-.menu-btn {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  background: #336699;
-  color: white;
-  border: none;
-  font-size: 1.5em;
-  cursor: pointer;
-  z-index: 999;
-}
-
-.sidebar {
-  height: 100%;
-  width: 250px;
-  position: fixed;
-  top: 0;
-  left: -250px;
-  background-color: #336699;
-  color: white;
-  overflow-x: hidden;
-  transition: 0.3s;
-  padding-top: 60px;
-  z-index: 998;
-}
-
-.sidebar a {
-  padding: 10px 20px;
-  text-decoration: none;
-  font-size: 1.2em;
-  color: white;
-  display: block;
-}
-
-.sidebar a:hover {
-  background-color: #29527a;
-}
-
-.sidebar.open {
-  left: 0;
+  font-family: sans-serif;
 }
