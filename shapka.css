@@ -8,11 +8,14 @@ body {
 
 /* Шапка */
 header {
-  background: #336699;
+  background-color: #336699;
   color: white;
-  text-align: center;
   padding: 30px 20px;
+  text-align: center;
+  font-family: sans-serif;
+  line-height: 1.6;
 }
+
 
 /* Текст в шапке */
 header h1 {
