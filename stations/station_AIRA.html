@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AIRA — Станция JGRF2025</title>
+  <link rel="stylesheet" href="../shapka.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Вставка шапки -->
+  <div id="header-placeholder"></div>
+
+  <script>
+    fetch("../header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header-placeholder").innerHTML = data;
+      });
+  </script>
+
+  <section style="padding: 40px; max-width: 900px; margin: 0 auto;">
+    <h1>📍 Станция AIRA</h1>
+
+    <h2>Координаты (эпоха 2020.0)</h2>
+    <pre style="background:#f0f0f0; padding: 10px; border-radius: 5px;">Широта:  31.824
+Долгота: 130.600
+Высота:  314.654
+X_2020:  -3530185.876
+Y_2020:  4118797.208
+Z_2020:  3344036.710</pre>
+
+    <h2>Файл координат (формат .txyz2)</h2>
+    <p><a href="AIRA/AIRA.txyz2" download>Скачать файл AIRA.txyz2</a></p>
+
+    <h2>График временных рядов</h2>
+    <img src="AIRA/AIRA_timeseries.png" alt="График координат" style="max-width: 100%; border: 1px solid #ccc; border-radius: 8px;" />
+
+    <h2>Интерактивный график</h2>
+    <iframe src="AIRA/AIRA_timeseries_trend_xyz_ekf.html" width="100%" height="500" style="border: none;"></iframe>
+  </section>
+
+  <script src="../menu.js"></script>
+</body>
+</html>
