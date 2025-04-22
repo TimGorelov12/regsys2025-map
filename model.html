@@ -15,6 +15,14 @@
   </style>
 </head>
 <body>
+  <div id="header-placeholder"></div>
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+    });
+</script>
   <h1>📈 Модель движения региона</h1>
   <p>Здесь будет размещена информация о модели движения региона.</p>
 </body>
