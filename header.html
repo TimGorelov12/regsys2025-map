@@ -1,65 +1,4 @@
-<style>
-  * {
-    box-sizing: border-box;
-  }
-
-  .menu-btn {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    background: #336699;
-    color: white;
-    border: none;
-    font-size: 1.5em;
-    cursor: pointer;
-    z-index: 1001;
-  }
-
-  .sidebar {
-    height: 100%;
-    width: 250px;
-    position: fixed;
-    top: 0;
-    left: -250px;
-    background-color: #336699;
-    color: white;
-    overflow-x: hidden;
-    transition: 0.3s;
-    padding-top: 60px;
-    z-index: 1000;
-  }
-
-  .sidebar a {
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 1.2em;
-    color: white;
-    display: block;
-  }
-
-  .sidebar a:hover {
-    background-color: #29527a;
-  }
-
-  .sidebar.open {
-    left: 0;
-  }
-
-  header {
-    background-color: #336699;
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
-    position: relative;
-    z-index: 900;
-  }
-
-  @media (min-width: 769px) {
-    body {
-      margin: 0;
-    }
-  }
-</style>
+<link rel="stylesheet" href="shapka.css">
 
 <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
@@ -81,4 +20,3 @@
     document.getElementById("sidebar").classList.toggle("open");
   }
 </script>
-
