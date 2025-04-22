@@ -4,108 +4,34 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Проект REGSYS2025</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      background: #f5f5f5;
-      line-height: 1.6;
-    }
-    header {
-      background: #336699;
-      color: white;
-      text-align: center;
-      padding: 30px 20px;
-    }
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    h2 {
-      margin-top: 40px;
-      font-size: 1.5em;
-    }
-    iframe {
-      width: 100%;
-      height: 600px;
-      border: none;
-      margin-top: 20px;
-    }
-  </style>
+  <link rel="stylesheet" href="shapka.css" />
 </head>
-  <!-- Навигационное меню -->
-<style>
-  .menu-btn {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    background: #336699;
-    color: white;
-    border: none;
-    font-size: 1.5em;
-    cursor: pointer;
-    z-index: 999;
-  }
 
-  .sidebar {
-    height: 100%;
-    width: 250px;
-    position: fixed;
-    top: 0;
-    left: -250px;
-    background-color: #336699;
-    color: white;
-    overflow-x: hidden;
-    transition: 0.3s;
-    padding-top: 60px;
-    z-index: 998;
-  }
-
-  .sidebar a {
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 1.2em;
-    color: white;
-    display: block;
-  }
-
-  .sidebar a:hover {
-    background-color: #29527a;
-  }
-
-  .sidebar.open {
-    left: 0;
-  }
-</style>
-
-<button class="menu-btn" onclick="toggleMenu()">☰</button>
-
-<div id="sidebar" class="sidebar">
-  <a href="index.html">Главное</a>
-  <a href="#faq">FAQ</a>
-  <a href="karta.html">Станции</a>
-  <a href="model.html">Модель движения региона</a>
-  <a href="extra.html">Дополнительно</a>
-</div>
-
-<script>
-  function toggleMenu() {
-    document.getElementById("sidebar").classList.toggle("open");
-  }
-</script>
 <body>
+  <!-- Кнопка меню -->
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
+  <!-- Боковое меню -->
+  <div id="sidebar" class="sidebar">
+    <a href="index.html">Главное</a>
+    <a href="#faq">FAQ</a>
+    <a href="karta.html">Станции</a>
+    <a href="model.html">Модель движения региона</a>
+    <a href="extra.html">Дополнительно</a>
+  </div>
+
+  <!-- Шапка -->
   <header>
     <h1>Проект REGSYS2025</h1>
     <p>Интерактивная карта геодезических пунктов и вся информация по проекту</p>
   </header>
 
+  <!-- Основной контент -->
   <section>
     <h2>❓ Что это за проект?</h2>
     <p>Это тестовая версия сайта, где мы отображаем станции и их характеристики. Работа подготовлена в рамках хакатона REGSYS2025.</p>
 
-    <h2>📌 FAQ</h2>
+    <h2 id="faq">📌 FAQ</h2>
     <ul>
       <li>Как отображаются станции? — С помощью карты с активными точками.</li>
       <li>Что будет на сайте? — Информация по каждой станции, параметры, ссылки и анализ.</li>
@@ -117,6 +43,6 @@
     <iframe src="karta.html"></iframe>
   </section>
 
+  <script src="menu.js"></script>
 </body>
 </html>
-
