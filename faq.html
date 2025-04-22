@@ -3,31 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FAQ | REGSYS2025</title>
+  <title>FAQ — REGSYS2025</title>
   <link rel="stylesheet" href="shapka.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Шапка и меню -->
+  <!-- Вставка шапки -->
+  <div id="header-placeholder"></div>
+
   <script>
     fetch("header.html")
       .then(res => res.text())
       .then(data => {
-        document.body.insertAdjacentHTML("afterbegin", data);
+        document.getElementById("header-placeholder").innerHTML = data;
       });
   </script>
 
   <!-- Основной контент -->
-  <section style="padding: 40px;">
-    <h1>📌 FAQ</h1>
-    <p>Здесь собраны ответы на наиболее часто задаваемые вопросы о проекте JGRF2025.</p>
-    <ul>
-      <li><strong>Как отображаются станции?</strong> — С помощью карты с активными точками.</li>
-      <li><strong>Что будет на сайте?</strong> — Информация по каждой станции, параметры, ссылки и анализ.</li>
-      <li><strong>Почему выбрана эпоха 2020.0?</strong> — Это стандартный момент времени для привязки координат в рамках региональных систем координат.</li>
-      <li><strong>Какие данные использовались?</strong> — Временные ряды координат 24 станций Японии из архива Nevada Geodetic Laboratory.</li>
-      <li><strong>Какие методы использовались?</strong> — Автоматический поиск скачков, фильтр Калмана, трансформация координат и другие.</li>
-    </ul>
+  <section>
+    <h1>📌 Часто задаваемые вопросы</h1>
+    <p>Здесь будут ответы на самые частые вопросы по проекту JGRF2025.</p>
+    <!-- Добавь нужные пункты -->
   </section>
 
   <script src="menu.js"></script>
