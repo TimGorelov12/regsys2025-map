@@ -1,24 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
+  <meta charset="UTF-8">
+  <title>Карта</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Стили шапки -->
   <link rel="stylesheet" href="shapka.css">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css">
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+
+  <!-- AwesomeMarkers (доп. иконки маркеров) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.awesome-markers/2.0.4/leaflet.awesome-markers.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.awesome-markers/2.0.4/leaflet.awesome-markers.js"></script>
+
+  <style>
+    #map {
+      height: 600px;
+      width: 100%;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
   <section>
     <div id="map"></div>
 
     <script>
-      // Инициализация карты
       var map = L.map('map').setView([36.5, 136.9], 6);
 
-      // Добавление слоя с картой
       L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '© OpenStreetMap contributors'
       }).addTo(map);
 
-      // Добавление маркера с переходом на локальную страницу
       var marker = L.marker([43.2095, 140.8583], {
         icon: L.AwesomeMarkers.icon({
           icon: 'info-sign',
