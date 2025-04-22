@@ -17,19 +17,32 @@ header p {
   margin: 10px 0 0;
   font-size: 1.2em;
 }
-
-/* Адаптация для мобильных */
-@media screen and (max-width: 768px) {
-  .sidebar {
-    width: 200px;
-    left: -200px;
-  }
-
-  .sidebar.open {
-    left: 0;
-  }
-
-  body {
-    margin-left: 0;
-  }
+.sidebar {
+  width: 200px;
+  left: -200px;
+  transition: 0.3s;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  background-color: #336699;
+  color: white;
+  padding-top: 60px;
+  z-index: 999;
 }
+
+.sidebar.open {
+  left: 0;
+}
+
+.menu-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: #336699;
+  color: white;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  z-index: 1000;
+}
+
