@@ -1,7 +1,12 @@
-<link rel="stylesheet" href="shapka.css">
+<!-- Подключение стилей -->
+<link rel="stylesheet" href="shapka.css" />
+<!-- Если нужен шрифт как у index.html — можно явно указать -->
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
+<!-- Кнопка меню -->
 <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
+<!-- Боковое меню -->
 <div id="sidebar" class="sidebar">
   <a href="index.html">Главное</a>
   <a href="index.html#faq">FAQ</a>
@@ -10,11 +15,13 @@
   <a href="extra.html">Дополнительно</a>
 </div>
 
+<!-- Шапка -->
 <header>
   <h1>Проект REGSYS2025</h1>
   <p>Интерактивная карта и информация о геодезических станциях</p>
 </header>
 
+<!-- Скрипт открытия меню -->
 <script>
   function toggleMenu() {
     document.getElementById("sidebar").classList.toggle("open");
