@@ -160,6 +160,10 @@ header p {
   line-height: 1.4;
   font-size: 1.1em;
 }
+.station-list {
+  list-style-type: disc;
+  padding-left: 20px;
+}
 
 
 
