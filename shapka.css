@@ -151,10 +151,14 @@ header p {
   color: #333;
 }
 
+.coord-title {
+  margin-bottom: 5px;  /* Меньше отступа снизу */
+}
+
 .coord-block {
-  margin-top: 10px;        /* Отступ сверху */
-  line-height: 1.4;        /* Межстрочный интервал */
-  font-size: 1.1em;        /* Размер шрифта — на уровне остального текста */
+  margin-top: 5px;     /* Меньше отступа сверху */
+  line-height: 1.4;
+  font-size: 1.1em;
 }
 
 
