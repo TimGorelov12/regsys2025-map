@@ -18,31 +18,30 @@
       });
   </script>
 
+  <!-- Основной контент -->
   <section class="map-section">
     <h1>📍 Станция G182</h1>
 
     <h2>Координаты (на эпоху 2020.0)</h2>
-    <div class="coord-block">
-      Широта: 44.092°<br>
-      Долгота: 145.238°<br>
-      Высота: 61.181 м<br>
-      X_2020: -3672054.150<br>
-      Y_2020:  3561520.505<br>
-      Z_2020:  4422630.157
-    </div>
+    <pre class="coord-block">
+Широта:     44.092°
+Долгота:    145.238°
+Высота:     61.181 м
+X_2020:     -3672054.150
+Y_2020:     3561520.505
+Z_2020:     4422630.157
+    </pre>
 
     <h2>Файл txyz2</h2>
     <a href="G182.txyz2" download>Скачать G182.txyz2</a>
 
     <h2>Графики координат XYZ</h2>
-    <img src="G182_timeseries.png" alt="Фото станции G182" style="max-width: 100%; border-radius: 8px; margin-bottom: 20px;" />
+    <img src="G182_timeseries.png" alt="Графики координат G182" style="max-width: 100%; border-radius: 8px; margin-bottom: 20px;" />
 
     <h2>Интерактивный график координат</h2>
-    <p>
-      <a href="G182_timeseries_trend_xyz_ekf.html" target="_blank" style="font-weight: bold;">
-        🔎 Открыть интерактивный график в новой вкладке
-      </a>
-    </p>
+    <div class="graph-wrapper">
+      <iframe class="graph-iframe" src="G182_timeseries_trend_xyz_ekf.html"></iframe>
+    </div>
   </section>
 </body>
 </html>
