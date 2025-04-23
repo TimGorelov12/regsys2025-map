@@ -142,6 +142,15 @@ header p {
     padding: 0 10px;
   }
 }
+.coord-block {
+  font-size: 1.2em;
+  font-family: 'Open Sans', sans-serif;
+  white-space: pre-wrap;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
 
 
 
