@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Карта станций</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+    #map { width: 100%; height: 100%; }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    var map = L.map('map').setView([36.5, 136.9], 6);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    var marker_AIRA = L.marker([31.8241, 130.5996]).addTo(map);
+    marker_AIRA.on('click', function () {
+      window.open('stations/station_AIRA.html', '_blank');
+    });
+
+    var marker_G101 = L.marker([43.2095, 140.8583]).addTo(map);
+    marker_G101.on('click', function () {
+      window.open('stations/station_G101.html', '_blank');
+    });
+
+    var marker_GMSD = L.marker([30.5564, 131.0156]).addTo(map);
+    marker_GMSD.on('click', function () {
+      window.open('stations/station_GMSD.html', '_blank');
+    });
+
+    var marker_SMST = L.marker([33.5779, 135.937]).addTo(map);
+    marker_SMST.on('click', function () {
+      window.open('stations/station_SMST.html', '_blank');
+    });
+
+    var marker_MIZU = L.marker([39.1352, 141.1328]).addTo(map);
+    marker_MIZU.on('click', function () {
+      window.open('stations/station_MIZU.html', '_blank');
+    });
+
+    var marker_STK2 = L.marker([43.5286, 141.8448]).addTo(map);
+    marker_STK2.on('click', function () {
+      window.open('stations/station_STK2.html', '_blank');
+    });
+
+    var marker_TSKB = L.marker([36.1057, 140.0875]).addTo(map);
+    marker_TSKB.on('click', function () {
+      window.open('stations/station_TSKB.html', '_blank');
+    });
+
+    var marker_G065 = L.marker([33.503, 130.0793]).addTo(map);
+    marker_G065.on('click', function () {
+      window.open('stations/station_G065.html', '_blank');
+    });
+
+    var marker_G182 = L.marker([43.2891, 145.5115]).addTo(map);
+    marker_G182.on('click', function () {
+      window.open('stations/station_G182.html', '_blank');
+    });
+
+    var marker_J001 = L.marker([45.403, 141.7504]).addTo(map);
+    marker_J001.on('click', function () {
+      window.open('stations/station_J001.html', '_blank');
+    });
+
+    var marker_S053 = L.marker([42.6803, 143.6421]).addTo(map);
+    marker_S053.on('click', function () {
+      window.open('stations/station_S053.html', '_blank');
+    });
+
+    var marker_G191 = L.marker([39.3375, 141.5349]).addTo(map);
+    marker_G191.on('click', function () {
+      window.open('stations/station_G191.html', '_blank');
+    });
+
+    var marker_Z202 = L.marker([34.1987, 139.1246]).addTo(map);
+    marker_Z202.on('click', function () {
+      window.open('stations/station_Z202.html', '_blank');
+    });
+
+    var marker_S043 = L.marker([34.8767, 138.0169]).addTo(map);
+    marker_S043.on('click', function () {
+      window.open('stations/station_S043.html', '_blank');
+    });
+
+    var marker_Z210 = L.marker([35.4727, 135.6231]).addTo(map);
+    marker_Z210.on('click', function () {
+      window.open('stations/station_Z210.html', '_blank');
+    });
+
+    var marker_G187 = L.marker([35.4349, 133.3389]).addTo(map);
+    marker_G187.on('click', function () {
+      window.open('stations/station_G187.html', '_blank');
+    });
+
+    var marker_J462 = L.marker([32.6694, 128.8431]).addTo(map);
+    marker_J462.on('click', function () {
+      window.open('stations/station_J462.html', '_blank');
+    });
+
+    var marker_J717 = L.marker([32.1971, 130.1797]).addTo(map);
+    marker_J717.on('click', function () {
+      window.open('stations/station_J717.html', '_blank');
+    });
+
+    var marker_J484 = L.marker([31.4694, 131.2174]).addTo(map);
+    marker_J484.on('click', function () {
+      window.open('stations/station_J484.html', '_blank');
+    });
+
+    var marker_CHOF = L.marker([35.6745, 139.5311]).addTo(map);
+    marker_CHOF.on('click', function () {
+      window.open('stations/station_CHOF.html', '_blank');
+    });
+
+    var marker_Z212 = L.marker([37.9296, 139.3512]).addTo(map);
+    marker_Z212.on('click', function () {
+      window.open('stations/station_Z212.html', '_blank');
+    });
+
+    var marker_J736 = L.marker([26.9445, 127.9451]).addTo(map);
+    marker_J736.on('click', function () {
+      window.open('stations/station_J736.html', '_blank');
+    });
+
+    var marker_G164 = L.marker([34.5754, 132.2688]).addTo(map);
+    marker_G164.on('click', function () {
+      window.open('stations/station_G164.html', '_blank');
+    });
+
+    var marker_S069 = L.marker([36.7086, 140.7196]).addTo(map);
+    marker_S069.on('click', function () {
+      window.open('stations/station_S069.html', '_blank');
+    });
+  </script>
+</body>
+</html>
