@@ -24,12 +24,21 @@
   <h1>📍 Станция AIRA</h1>
 
   <h2>Координаты (на эпоху 2020.0)</h2>
-  <pre id="coord-output">Загрузка...</pre>
+  <h2>Координаты (на эпоху 2020.0)</h2>
+<pre>
+Широта:  31.824
+Долгота: 130.600
+Высота:  314.654
+X_2020:  -3530185.876
+Y_2020:  4118797.208
+Z_2020:  3344036.710
+</pre>
+
 
   <h2>Файл txyz2</h2>
   <a href="stations/AIRA/AIRA.txyz2" download>Скачать AIRA.txyz2</a>
 
-  <h2>Фотография станции</h2>
+  <h2>Графики координат XYZ</h2>
   <img src="stations/AIRA/AIRA_timeseries.png" alt="Фото станции AIRA" style="max-width: 100%; border-radius: 8px; margin-bottom: 20px;" />
 
   <h2>Интерактивный график координат</h2>
@@ -41,15 +50,6 @@
 
 </section>
 
-
-  <!-- Загрузка координат -->
-  <script>
-    fetch("stations/AIRA/AIRA_coordinates.txt")
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById("coord-output").textContent = data;
-      });
-  </script>
 
  
 
