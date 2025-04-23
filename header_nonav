@@ -1,0 +1,8 @@
+<!-- Только шапка без меню -->
+<link rel="stylesheet" href="shapka.css" />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+<header>
+  <h1>Проект REGSYS2025</h1>
+  <p>Интерактивная карта геодезических пунктов и вся информация по проекту</p>
+</header>
