@@ -194,5 +194,18 @@ header p {
   height: auto;
 }
 
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.header-logo {
+  height: 40px;
+  max-width: 50px;
+}
 
 
