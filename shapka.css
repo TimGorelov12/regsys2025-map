@@ -164,6 +164,16 @@ header p {
   list-style-type: disc;
   padding-left: 20px;
 }
+.header-with-logo .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  height: 80px;
+  margin-right: 20px;
+}
 
 
 
