@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Станция AIRA — JGRF2025</title>
-  <link rel="stylesheet" href="../shapka.css" />
+  <title>Станция G182 — JGRF2025</title>
+  <link rel="stylesheet" href="../../shapka.css" />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Шапка и меню -->
+  <!-- Шапка без меню -->
   <div id="header-placeholder"></div>
   <script>
-    fetch("../header_nonav.html")
+    fetch("../../header_nonav.html")
       .then(res => res.text())
       .then(data => {
         document.getElementById("header-placeholder").innerHTML = data;
@@ -19,39 +19,29 @@
   </script>
 
   <!-- Основной контент -->
-  <!-- Основной контент -->
-<section class="map-section">
-  <h1>📍 Станция AIRA</h1>
+  <section class="map-section">
+    <h1>📍 Станция G182</h1>
 
+    <h2>Координаты (на эпоху 2020.0)</h2>
+    <pre class="coord-block">
+Широта:     43.289°
+Долгота:    145.512°
+Высота:     52.134 м
+X_2020:     -3832736.223
+Y_2020:     2633033.260
+Z_2020:     4350974.751
+    </pre>
 
-  <h2 class="coord-title">Координаты (на эпоху 2020.0)</h2>
-<div class="coord-block">
-  Широта: 31.824°<br>
-  Долгота: 130.600°<br>
-  Высота: 314.654 м<br>
-  X_2020: -3530185.876<br>
-  Y_2020: 4118797.208<br>
-  Z_2020: 3344036.710
-</div>
+    <h2>Файл txyz2</h2>
+    <a href="G182.txyz2" download>Скачать G182.txyz2</a>
 
+    <h2>Графики координат XYZ</h2>
+    <img src="G182_timeseries.png" alt="Графики координат G182" style="max-width: 100%; border-radius: 8px; margin-bottom: 20px;" />
 
-  <h2>Файл txyz2</h2>
-  <a href="stations/AIRA/AIRA.txyz2" download>Скачать AIRA.txyz2</a>
-
-  <h2>Графики координат XYZ</h2>
-  <img src="stations/AIRA/AIRA_timeseries.png" alt="Фото станции AIRA" style="max-width: 100%; border-radius: 8px; margin-bottom: 20px;" />
-
-  <h2>Интерактивный график координат</h2>
-<p>
-  <a href="stations/AIRA/AIRA_timeseries_trend_xyz_ekf.html" target="_blank" style="font-weight: bold;">
-    🔎 Открыть интерактивный график
-  </a>
-</p>
-
-</section>
-
-
- 
-
+    <h2>Интерактивный график координат</h2>
+    <div class="graph-wrapper">
+      <iframe class="graph-iframe" src="G182_timeseries_trend_xyz_ekf.html"></iframe>
+    </div>
+  </section>
 </body>
 </html>
