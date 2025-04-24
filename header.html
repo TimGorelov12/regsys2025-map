@@ -1,9 +1,11 @@
+<!-- Подключение стилей -->
 <link rel="stylesheet" href="shapka.css" />
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
 
-<!-- Меню -->
+<!-- Кнопка меню (если есть) -->
 <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
+<!-- Боковое меню -->
 <div id="sidebar" class="sidebar">
   <a href="index.html">Главное</a>
   <a href="faq.html">FAQ</a>
@@ -16,8 +18,8 @@
 <!-- Шапка -->
 <header>
   <div class="header-content">
+    <img src="logo.png" alt="Логотип проекта" class="header-logo" />
     <h1>Japanese Geodetic Reference Frame 2025</h1>
-    <img src="лого.png" alt="Логотип проекта" class="header-logo">
   </div>
 </header>
 
@@ -26,4 +28,5 @@
     document.getElementById("sidebar").classList.toggle("open");
   }
 </script>
+
 
