@@ -1,11 +1,9 @@
-<!-- Подключение стилей -->
 <link rel="stylesheet" href="shapka.css" />
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
-<!-- Кнопка меню -->
+<!-- Меню -->
 <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
-<!-- Боковое меню -->
 <div id="sidebar" class="sidebar">
   <a href="index.html">Главное</a>
   <a href="faq.html">FAQ</a>
@@ -16,17 +14,16 @@
 </div>
 
 <!-- Шапка -->
-<header class="header-with-logo">
-  <div class="header-content">
-    <div>
+<header>
+  <div class="header-container">
+    <div class="header-text">
       <h1>Проект REGSYS2025</h1>
       <p>Интерактивная карта геодезических пунктов и вся информация по проекту</p>
     </div>
-    <img src="лого.png" alt="Логотип" class="header-logo">
+    <img src="лого.png" alt="Логотип проекта" class="header-logo">
   </div>
 </header>
 
-<!-- Скрипт открытия меню -->
 <script>
   function toggleMenu() {
     document.getElementById("sidebar").classList.toggle("open");
