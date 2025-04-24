@@ -186,3 +186,42 @@ header {
     left: 0;
   }
 }
+/* Убираем перенос строки заголовка из-за изображения */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap; /* предотвращает перенос */
+  position: relative;
+  padding: 0 60px 0 20px;
+  box-sizing: border-box;
+}
+
+.header-title {
+  font-size: 1.5em;
+  flex: 1;
+  text-align: center;
+  white-space: nowrap; /* предотвращает перенос */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.header-logo {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 60px;
+  width: auto;
+}
+
+/* Для очень маленьких экранов */
+@media screen and (max-width: 480px) {
+  .header-title {
+    font-size: 1.1em;
+  }
+
+  .header-logo {
+    height: 50px;
+  }
+}
