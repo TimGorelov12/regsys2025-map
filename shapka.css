@@ -39,16 +39,7 @@ header {
   width: auto;
 }
 
-/* ====== АДАПТИВ ====== */
-@media screen and (max-width: 768px) {
-  .header-title {
-    font-size: 1.3em;
-  }
 
-  .header-logo {
-    height: 60px;
-  }
-}
 
 
 /* ====== КНОПКА МЕНЮ ====== */
