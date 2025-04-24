@@ -33,18 +33,6 @@ header {
   width: auto;
 }
 
-/* Адаптив для телефона */
-@media screen and (max-width: 768px) {
-  .header-title {
-    font-size: 1.2em;
-  }
-
-  .header-logo {
-    height: 50px;
-  }
-}
-
-
 /* ====== КНОПКА МЕНЮ ====== */
 .menu-btn {
   position: fixed;
@@ -155,16 +143,16 @@ header {
 
 /* ====== АДАПТИВ ====== */
 @media screen and (max-width: 768px) {
-  .menu-btn {
+  .header-title {
     font-size: 1.2em;
   }
 
-  header h1 {
-    font-size: 1.4em;
+  .header-logo {
+    height: 50px;
   }
 
-  .header-logo {
-    height: 40px;
+  .menu-btn {
+    font-size: 1.2em;
   }
 
   .graph-iframe {
