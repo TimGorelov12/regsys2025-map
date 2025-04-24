@@ -2,18 +2,19 @@
 header {
   background-color: #336699;
   color: white;
-  padding: 20px;
+  padding: 20px 20px;
 }
 
-/* Структура шапки */
+/* Контейнер шапки */
 .header-container {
   display: flex;
-  justify-content: center;
   align-items: center;
-  position: relative;
+  justify-content: center;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 20px;
+  position: relative;
+  padding: 0 60px 0 20px; /* отступ справа под логотип */
+  box-sizing: border-box;
 }
 
 /* Текст по центру */
@@ -21,17 +22,30 @@ header {
   font-size: 1.6em;
   text-align: center;
   flex: 1;
+  line-height: 1.4;
 }
 
-/* Логотип справа */
+/* Логотип */
 .header-logo {
   position: absolute;
-  right: 10px;
+  right: 20px;
   top: 50%;
   transform: translateY(-50%);
-  height: 60px;
+  height: 70px;
   width: auto;
 }
+
+/* ====== АДАПТИВ ====== */
+@media screen and (max-width: 768px) {
+  .header-title {
+    font-size: 1.3em;
+  }
+
+  .header-logo {
+    height: 60px;
+  }
+}
+
 
 /* ====== КНОПКА МЕНЮ ====== */
 .menu-btn {
