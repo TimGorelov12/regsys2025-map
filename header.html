@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="shapka.css" />
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
 
-<!-- Кнопка меню (если есть) -->
+<!-- Кнопка меню -->
 <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
 <!-- Боковое меню -->
@@ -16,8 +16,8 @@
 </div>
 
 <!-- Шапка -->
-<header>
-  <div class="header-content">
+<header class="header-with-logo">
+  <div class="header-container">
     <h1 class="header-title">Japanese Geodetic Reference Frame 2025</h1>
     <img src="logo.png" alt="Логотип проекта" class="header-logo" />
   </div>
@@ -28,3 +28,4 @@
     document.getElementById("sidebar").classList.toggle("open");
   }
 </script>
+
