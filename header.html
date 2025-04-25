@@ -3,7 +3,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
 
 <!-- Кнопка меню -->
-<button class="menu-btn" onclick="toggleMenu()">☰</button>
+<button class="menu-btn" onclick="toggleMenu(event)">☰</button>
+
 
 <!-- Боковое меню -->
 <div id="sidebar" class="sidebar">
@@ -26,12 +27,12 @@
 
 
 <script>
-  // Твоя уже существующая функция
-  function toggleMenu() {
+  function toggleMenu(event) {
+    event.stopPropagation(); // предотвращаем закрытие меню при клике на кнопку
     document.getElementById("sidebar").classList.toggle("open");
   }
 
-  // Новая часть — закрытие при клике вне меню
+  // Закрытие меню при клике вне меню и вне кнопки
   document.addEventListener("click", function (event) {
     const sidebar = document.getElementById("sidebar");
     const menuBtn = document.querySelector(".menu-btn");
@@ -39,10 +40,11 @@
     const clickedInsideMenu = sidebar.contains(event.target);
     const clickedOnButton = menuBtn.contains(event.target);
 
-    if (!clickedInsideMenu && !clickedOnButton) {
+    if (!clickedInsideMenu && !clickedOnButton && sidebar.classList.contains("open")) {
       sidebar.classList.remove("open");
     }
   });
 </script>
+
 
 
