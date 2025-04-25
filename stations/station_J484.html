@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Станция J484 — JGRF2025</title>
+  <link rel="stylesheet" href="../shapka.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Шапка -->
+  <div id="header-placeholder"></div>
+  <script>
+    fetch("../header_nonav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header-placeholder").innerHTML = data;
+      });
+  </script>
+
+  <!-- Основной контент -->
+  <section class="map-section">
+    <h1>📍 Станция J484</h1>
+
+    <h2 class="coord-title">Координаты (на эпоху 2020.0)</h2>
+<div class="coord-block">
+  Широта: 31.469°  
+  Долгота: 131.217°  
+  Высота: 60.176 м  
+  X_2020: -3587845.168  
+  Y_2020: 4095852.961  
+  Z_2020: 3310422.636
+</div>
+
+    <h2>Файл txyz2</h2>
+    <a href="station_J484/J484.txyz2" download>Скачать J484.txyz2</a>
+
+    <h2>Графики координат XYZ</h2>
+    <img src="station_J484/J484_timeseries.png" alt="Графики координат J484" style="max-width: 100%; border-radius: 8px; margin-bottom: 20px;" />
+
+    <h2>Интерактивный график координат</h2>
+    <p>
+      <a href="station_J484/J484_timeseries_trend_xyz_ekf.html" target="_blank" style="font-weight: bold;">
+        🔎 Открыть интерактивный график
+      </a>
+    </p>
+  </section>
+</body>
+</html>
