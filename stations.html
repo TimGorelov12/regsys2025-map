@@ -10,14 +10,36 @@
 <body>
   <!-- Шапка -->
   <div id="header-placeholder"></div>
+
   <script>
     fetch("header.html")
       .then(res => res.text())
       .then(data => {
         document.getElementById("header-placeholder").innerHTML = data;
+
+        // Сразу после вставки шапки прописываем код меню
+        const sidebar = document.getElementById("sidebar");
+        const menuBtn = document.querySelector(".menu-btn");
+
+        function toggleMenu(event) {
+          event.stopPropagation();
+          sidebar.classList.toggle("open");
+        }
+
+        menuBtn.addEventListener("click", toggleMenu);
+
+        document.addEventListener("click", function (event) {
+          const clickedInsideMenu = sidebar.contains(event.target);
+          const clickedOnButton = menuBtn.contains(event.target);
+
+          if (!clickedInsideMenu && !clickedOnButton && sidebar.classList.contains("open")) {
+            sidebar.classList.remove("open");
+          }
+        });
       });
   </script>
 
+  <!-- Основной контент -->
   <section class="map-section">
     <h1>📌 Список станций</h1>
 
@@ -59,6 +81,7 @@
     </div>
   </section>
 
-  <script src="menu.js"></script>
 </body>
 </html>
+
+
