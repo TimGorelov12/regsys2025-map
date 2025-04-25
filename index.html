@@ -12,14 +12,36 @@
 
 <body>
   <!-- Шапка и меню -->
-  <div id="header-placeholder"></div>
-  <script>
-    fetch("header.html")
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById("header-placeholder").innerHTML = data;
+ <div id="header-placeholder"></div>
+
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+
+      // Теперь ВСТАВЛЯЕМ код меню сюда:
+      const sidebar = document.getElementById("sidebar");
+      const menuBtn = document.querySelector(".menu-btn");
+
+      function toggleMenu(event) {
+        event.stopPropagation();
+        sidebar.classList.toggle("open");
+      }
+
+      menuBtn.addEventListener("click", toggleMenu);
+
+      document.addEventListener("click", function (event) {
+        const clickedInsideMenu = sidebar.contains(event.target);
+        const clickedOnButton = menuBtn.contains(event.target);
+
+        if (!clickedInsideMenu && !clickedOnButton && sidebar.classList.contains("open")) {
+          sidebar.classList.remove("open");
+        }
       });
-  </script>
+    });
+</script>
+
 
   <!-- Основной контент -->
   <section class="map-section">
