@@ -1,15 +1,15 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const sidebar = document.getElementById("sidebar");
   const menuBtn = document.querySelector(".menu-btn");
 
   function toggleMenu(event) {
-    event.stopPropagation();
+    event.stopPropagation(); // не даём закрыть при клике на кнопку
     sidebar.classList.toggle("open");
   }
 
   menuBtn.addEventListener("click", toggleMenu);
 
-  document.addEventListener("click", function(event) {
+  document.addEventListener("click", function (event) {
     const clickedInsideMenu = sidebar.contains(event.target);
     const clickedOnButton = menuBtn.contains(event.target);
 
@@ -18,3 +18,4 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 });
+
