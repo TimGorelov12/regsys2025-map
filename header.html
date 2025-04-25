@@ -24,9 +24,25 @@
 </header>
 
 
+
 <script>
+  // Твоя уже существующая функция
   function toggleMenu() {
     document.getElementById("sidebar").classList.toggle("open");
   }
+
+  // Новая часть — закрытие при клике вне меню
+  document.addEventListener("click", function (event) {
+    const sidebar = document.getElementById("sidebar");
+    const menuBtn = document.querySelector(".menu-btn");
+
+    const clickedInsideMenu = sidebar.contains(event.target);
+    const clickedOnButton = menuBtn.contains(event.target);
+
+    if (!clickedInsideMenu && !clickedOnButton) {
+      sidebar.classList.remove("open");
+    }
+  });
 </script>
+
 
