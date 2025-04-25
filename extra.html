@@ -16,6 +16,26 @@
       .then(res => res.text())
       .then(data => {
         document.getElementById("header-placeholder").innerHTML = data;
+
+        // Код для меню
+        const sidebar = document.getElementById("sidebar");
+        const menuBtn = document.querySelector(".menu-btn");
+
+        function toggleMenu(event) {
+          event.stopPropagation();
+          sidebar.classList.toggle("open");
+        }
+
+        menuBtn.addEventListener("click", toggleMenu);
+
+        document.addEventListener("click", function (event) {
+          const clickedInsideMenu = sidebar.contains(event.target);
+          const clickedOnButton = menuBtn.contains(event.target);
+
+          if (!clickedInsideMenu && !clickedOnButton && sidebar.classList.contains("open")) {
+            sidebar.classList.remove("open");
+          }
+        });
       });
   </script>
 
@@ -29,7 +49,6 @@
     </p>
     <p><em>Сами параметры и их оценка точности приведены в файле ниже:</em></p>
     <p><a href="Helmert.txt" download style="font-weight: bold; font-size: 18px;">📄 Скачать файл с параметрами преобразования (Helmert.txt)</a></p>
-
 
     <h2>Автоматический отбор станций</h2>
     <p>
@@ -52,8 +71,6 @@
       <a href="https://vadimw61.pythonanywhere.com/" target="_blank">https://vadimw61.pythonanywhere.com/</a>
     </p>
   </section>
-
-  <script src="menu.js"></script>
 </body>
 </html>
 
