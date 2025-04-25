@@ -16,6 +16,26 @@
       .then(res => res.text())
       .then(data => {
         document.getElementById("header-placeholder").innerHTML = data;
+
+        // Код меню
+        const sidebar = document.getElementById("sidebar");
+        const menuBtn = document.querySelector(".menu-btn");
+
+        function toggleMenu(event) {
+          event.stopPropagation();
+          sidebar.classList.toggle("open");
+        }
+
+        menuBtn.addEventListener("click", toggleMenu);
+
+        document.addEventListener("click", function (event) {
+          const clickedInsideMenu = sidebar.contains(event.target);
+          const clickedOnButton = menuBtn.contains(event.target);
+
+          if (!clickedInsideMenu && !clickedOnButton && sidebar.classList.contains("open")) {
+            sidebar.classList.remove("open");
+          }
+        });
       });
   </script>
 
@@ -47,7 +67,5 @@
 
     <p style="margin-top: 30px;">С уважением,<br><strong>Команда JGRF2025</strong></p>
   </section>
-
-  <script src="menu.js"></script>
 </body>
 </html>
