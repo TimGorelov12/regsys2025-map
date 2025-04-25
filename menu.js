@@ -1,21 +1,17 @@
-document.addEventListener("DOMContentLoaded", function () {
+function toggleMenu() {
+  document.getElementById("sidebar").classList.toggle("open");
+}
+
+// Закрытие меню при клике вне него и вне кнопки
+document.addEventListener("click", function (event) {
   const sidebar = document.getElementById("sidebar");
-  const menuBtn = document.querySelector(".menu-btn");
+  const burger = document.querySelector(".menu-btn"); // ← это твоя кнопка ☰
 
-  function toggleMenu(event) {
-    event.stopPropagation(); // не даём закрыть при клике на кнопку
-    sidebar.classList.toggle("open");
+  const isClickInsideSidebar = sidebar.contains(event.target);
+  const isClickOnBurger = burger && burger.contains(event.target);
+
+  if (!isClickInsideSidebar && !isClickOnBurger && sidebar.classList.contains("open")) {
+    sidebar.classList.remove("open");
   }
-
-  menuBtn.addEventListener("click", toggleMenu);
-
-  document.addEventListener("click", function (event) {
-    const clickedInsideMenu = sidebar.contains(event.target);
-    const clickedOnButton = menuBtn.contains(event.target);
-
-    if (!clickedInsideMenu && !clickedOnButton && sidebar.classList.contains("open")) {
-      sidebar.classList.remove("open");
-    }
-  });
 });
 
