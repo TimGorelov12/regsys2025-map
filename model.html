@@ -10,14 +10,33 @@
 <body>
   <div id="header-placeholder"></div>
   <script>
-    fetch("header.html")
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById("header-placeholder").innerHTML = data;
-      });
-  </script>
+fetch("header.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("header-placeholder").innerHTML = data;
 
-  <section class="map-section">
+    // СРАЗУ после вставки шапки прописываем код для меню!
+    const sidebar = document.getElementById("sidebar");
+    const menuBtn = document.querySelector(".menu-btn");
+
+    function toggleMenu(event) {
+      event.stopPropagation();
+      sidebar.classList.toggle("open");
+    }
+
+    menuBtn.addEventListener("click", toggleMenu);
+
+    document.addEventListener("click", function (event) {
+      const clickedInsideMenu = sidebar.contains(event.target);
+      const clickedOnButton = menuBtn.contains(event.target);
+
+      if (!clickedInsideMenu && !clickedOnButton && sidebar.classList.contains("open")) {
+        sidebar.classList.remove("open");
+      }
+    });
+  });
+</script>
+
     <h2>🧭 Модель движения региона</h2>
     <p>Один из ключевых этапов нашего проекта — построение модели движения геодезических пунктов на территории Японии, основанной на оцененных координатах и скоростях нашей системы.</p>
 
