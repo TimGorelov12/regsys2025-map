@@ -16,6 +16,26 @@
       .then(res => res.text())
       .then(data => {
         document.getElementById("header-placeholder").innerHTML = data;
+
+        // Код меню
+        const sidebar = document.getElementById("sidebar");
+        const menuBtn = document.querySelector(".menu-btn");
+
+        function toggleMenu(event) {
+          event.stopPropagation();
+          sidebar.classList.toggle("open");
+        }
+
+        menuBtn.addEventListener("click", toggleMenu);
+
+        document.addEventListener("click", function (event) {
+          const clickedInsideMenu = sidebar.contains(event.target);
+          const clickedOnButton = menuBtn.contains(event.target);
+
+          if (!clickedInsideMenu && !isClickOnButton && sidebar.classList.contains("open")) {
+            sidebar.classList.remove("open");
+          }
+        });
       });
   </script>
 
@@ -68,8 +88,5 @@
       После оценки скоростей в ITRF мы построили модель движения литосферных плит на основе теоремы Эйлера. Каждая плита рассматривалась как жёсткое тело, вращающееся вокруг фиксированной оси. Мы определили угловые скорости методом наименьших квадратов и рассчитали остаточные скорости — отклонения от модели, отражающие локальные деформации.
     </p>
   </section>
-
-  <script src="menu.js"></script>
 </body>
 </html>
-
